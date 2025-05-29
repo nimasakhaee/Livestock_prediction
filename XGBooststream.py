@@ -19,30 +19,10 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# # --- Load Data and Model ---
-# data = pd.read_excel("C:/NEU/Research/Research/Kim project 2/NEW DATA/4 RF imputted.xlsx")
-# categorical_features = ['Biomass', 'Pollutant']
-# X = data.drop('Qe (mg/g)', axis=1)
-# y = data['Qe (mg/g)']
-
-# for col in categorical_features:
-#     X[col] = X[col].astype('category')
-
-# model = xgb.XGBRegressor(
-#     n_estimators=2994,
-#     max_depth=15,
-#     learning_rate=0.09891935310411579,
-#     subsample=0.5847597533737711,
-#     colsample_bytree=0.6636911331793705,
-#     tree_method='hist',
-#     enable_categorical=True,
-#     eval_metric='rmse'
-# )
-# model.fit(X, y)
 
 @st.cache_data
 def load_data():
-    return pd.read_excel("C:/NEU/Research/Research/Kim project 2/NEW DATA/4 RF imputted.xlsx")
+    return pd.read_excel("DATA.xlsx")
 
 @st.cache_resource
 def load_model():
