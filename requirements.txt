@@ -3,3 +3,4 @@ xgboost
 streamlit
 openpyxl
 scikit-learn
+joblib
