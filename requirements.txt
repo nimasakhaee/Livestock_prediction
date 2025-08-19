@@ -4,5 +4,3 @@ streamlit
 openpyxl
 scikit-learn
 joblib
-random
-
