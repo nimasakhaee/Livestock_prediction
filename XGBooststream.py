@@ -19,8 +19,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # --- Load Data and Model ---
-# data = pd.read_excel("DATA.xlsx")
-data = pd.read_excel("C:/NEU/Research/Research/Kim project 2/codes/11 XGBoost/new/DATA_NEW.xlsx")
+data = pd.read_excel("DATA.xlsx")
 categorical_features = ['Biomass', 'Pollutant']
 X = data.drop('Qe (mg/g)', axis=1)
 y = data['Qe (mg/g)']
@@ -154,3 +153,4 @@ if submitted:
                 st.success(f"🌟 Predicted Qe (mg/g): {pred:.2f}")
     except Exception as e:
         st.error(f"⚠️ Invalid input! {str(e)}")
+
